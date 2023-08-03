@@ -1,4 +1,7 @@
 import "./App.css";
+import Paddocks from "./Paddocks";
+
+
 
 function App() {
   let prefijos = ["wonder", "spider", "ant", "iron"];
@@ -25,20 +28,13 @@ function App() {
  console.log(YearsCentury("1567"))
 
 
-  //Funcion de palabras palindromas.
- function Solution (inputString) {
-  if (typeof inputString === "number") return undefined
-    let minusculas =  inputString.toLowerCase()
-    let desarmadas = minusculas.
-      
-     
-}
-console.log(Solution(89))
+ 
 
  
  return (
     <div className="App">
       <h1>{nombresCompletos}</h1>
+      <Paddocks/>
     </div>
   );
 }
