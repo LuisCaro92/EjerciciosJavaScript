@@ -1,5 +1,6 @@
 import "./App.css";
-import Paddocks from "./paddocks/Paddocks";
+import Paddocks from "./paddocks/Paddocks"
+
 
 
 
