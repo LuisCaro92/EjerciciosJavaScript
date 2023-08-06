@@ -1,11 +1,23 @@
-
-
+import { useEffect } from "react";
+import { useState } from "react";
 
 
 
 
 const AdminPadocks =(props) =>{
 
+    const [avatar, setAvatar] = useState([]);
+
+    const getCaracteres = () => {
+        fetch(`https://randomuser.me/api/`)
+          .then((res) => res.json())
+          .then((data) => console.log(data.results))
+          .catch((error) => console.log(error));
+      };
+
+      useEffect(()=>{
+        getCaracteres();
+      })
     return(
 
         <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 ">
