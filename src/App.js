@@ -1,5 +1,5 @@
 import "./App.css";
-import Paddocks from "./Paddocks";
+import Paddocks from "./paddocks/Paddocks";
 
 
 
@@ -32,8 +32,8 @@ function App() {
 
  
  return (
-    <div className="App">
-      <h1>{nombresCompletos}</h1>
+    <div className="bg-gray-700 text-white text-center w-xl">
+  
       <Paddocks/>
     </div>
   );

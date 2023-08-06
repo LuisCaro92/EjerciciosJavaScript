@@ -1,3 +1,4 @@
+import AdminPadocks from "./AdminPadocks";
 
 
 
@@ -65,17 +66,15 @@ const listPaddockManagersByName =(props)=>{
 }
 console.log(listPaddockManagersByName())
     return(
-       
-           <div>
-            <h1> Aqui vamos a practicar con los Paddocks</h1>
-           <div className="tablarut">
-            <h1>aqui van los rut en una lista</h1>
-            <ul className="">
-                <il></il>
-                <il></il>
-            </ul>
-           </div>
-            </div> 
+   
+    <div class="bg-gray-500 ">
+      <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <h2 class="text-2xl font-bold tracking-tight text-White-900">Administradores Paddocks</h2>
+    
+        <AdminPadocks/>
+      </div>
+    </div>
+    
        
     )
 }
