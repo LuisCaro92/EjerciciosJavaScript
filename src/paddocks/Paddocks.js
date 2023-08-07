@@ -1,4 +1,6 @@
 import AdminPadocks from "./AdminPadocks";
+import { useState, useEffect } from "react";
+
 
 
 
@@ -52,26 +54,49 @@ const paddockManagers = [
     { id: 2, name: 'VINA SANTA PAULA' },
     { id: 3, name: 'FORESTAL Y AGRICOLA LO ENCINA' }
   ];
-  
 
 
 
 
 
+const Paddocks =(props)=>{
 
-const Paddocks =()=>{
+const [avatares, setAvatares] = useState([]);
 
-const listPaddockManagersByName =(props)=>{
-    return paddockManagers.map((paddockManager) => paddockManager.taxNumber);
+  const getAvatar = () => {
+    fetch(`https://randomuser.me/api/`)
+      .then((res) => res.json())
+      .then((data) => setAvatares(data.results))
+      .catch((error) => console.log(error));
+  };
+
+  useEffect(()=>{
+    getAvatar();
+  })
+
+
+const listPaddockManagersByName =()=>{
+
+  let rut = paddockManagers.map((paddockManager) => paddockManager.taxNumber)
+  console.log(rut)
+    return ;
+   
 }
-console.log(listPaddockManagersByName())
+listPaddockManagersByName()
     return(
    
     <div class="bg-gray-500 ">
       <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 class="text-2xl font-bold tracking-tight text-White-900">Administradores Paddocks</h2>
+    <div className="container">
+      {avatares.map((avatar)=>(
+    <AdminPadocks
+    img ={avatar.picture}
     
-        <AdminPadocks/>
+    />
+     ))}
+    </div>
+       
       </div>
     </div>
     
