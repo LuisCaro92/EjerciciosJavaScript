@@ -190,38 +190,40 @@ const farms = [
   { id: 3, name: "FORESTAL Y AGRICOLA LO ENCINA" },
 ];
 
-const Paddocks = (props) => {
-  const [avatares, setAvatares] = useState([]);
 
-  const getAvatar = () => {
-    fetch(`https://randomuser.me/api/`)
-      .then((res) => res.json())
-      .then((data) => console(data.results))
-      .catch((error) => console.log(error));
-  };
+const Paddocks = () => {
 
-  useEffect(() => {
-    getAvatar();
-  });
-
+// fucion para ordenar los rut de administradores de forma decendiente por sus nombres
   const listPaddockManagersByName = () => {
-    return paddockManagers.map((paddockManager) => paddockManager.taxNumber);
+    const paddockDecendente = paddockManagers.sort((x, y)=> x.name.localeCompare(y.name)); 
+    
+    return paddockDecendente.map((paddockManager) => paddockManager.taxNumber);
   };
-  listPaddockManagersByName();
+ listPaddockManagersByName()
+ console.log(listPaddockManagersByName())
+
+
+
+//Funcion para ordenar los cuarteles con sus respectivos nombres de forma decreciente por la cantiad de hectareas.
+ const sortPaddockTypeByTotalArea =()=>{
+ const padockType = paddocks.map((paddock)=> paddock.paddockTypeId)
+
+  return 
+ }
+sortPaddockTypeByTotalArea();
+console.log(paddockType );
+ 
+
   return (
     <div class="bg-gray-500 ">
       <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 class="text-2xl font-bold tracking-tight text-White-900">
           Administradores Paddocks
         </h2>
-        <div className="container">
-          {avatares.map((avatar) => (
-            <AdminPadocks name={avatar.name} />
-          ))}
-        </div>
+        
       </div>
     </div>
   );
-};
+  }
 
 export default Paddocks;
