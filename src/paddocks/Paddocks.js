@@ -190,36 +190,32 @@ const farms = [
   { id: 3, name: "FORESTAL Y AGRICOLA LO ENCINA" },
 ];
 
-
 const Paddocks = () => {
-
-// fucion para ordenar los rut de administradores de forma decendiente por sus nombres
+  // fucion para ordenar los rut de administradores de forma decendiente por sus nombres
   const listPaddockManagersByName = () => {
-    const paddockDecendente = paddockManagers.sort((x, y)=> x.name.localeCompare(y.name)); 
-    
+    const paddockDecendente = paddockManagers.sort((x, y) =>
+      x.name.localeCompare(y.name)
+    );
+
     return paddockDecendente.map((paddockManager) => paddockManager.taxNumber);
   };
- listPaddockManagersByName()
- console.log(listPaddockManagersByName())
+  listPaddockManagersByName();
+  console.log(listPaddockManagersByName());
 
-
-
-//Funcion para ordenar los cuarteles con sus respectivos nombres de forma decreciente por la cantiad de hectareas.
- const sortPaddockTypeByTotalArea =()=>{
-  let padockArea = paddocks.map((padoc) => padoc.area) 
-  let padockType = paddocks.map((paddock)=> paddock.paddockTypeId)
-  
-  
-  for (padockType < 0; padockType = padockArea; padockType++){
-  
-  } 
-  console.log(padockArea);
-
- 
-  return 
- }
-
- 
+  //Funcion para ordenar los cuarteles con sus respectivos nombres de forma decreciente por la cantiad de hectareas.
+  const sortPaddockTypeByTotalArea = () => {
+    const paddockArea = paddocks.map((paddock) => paddock.area);
+    const paddockSuma = paddockArea.reduce((contador, paddock )=>{
+      if (paddock.paddockTypeId === paddockTypeId)
+      return contador + paddock.area
+    })
+    console.log(paddockSuma);
+    /*const sumaArea = padockArea.reduce((padockType) => {
+      
+    console.log(sumaArea);
+    )}; */
+  };
+  sortPaddockTypeByTotalArea();
 
   return (
     <div class="bg-gray-500 ">
@@ -227,10 +223,9 @@ const Paddocks = () => {
         <h2 class="text-2xl font-bold tracking-tight text-White-900">
           Administradores Paddocks
         </h2>
-        
       </div>
     </div>
   );
-  }
+};
 
 export default Paddocks;
