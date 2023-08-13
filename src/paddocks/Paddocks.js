@@ -206,12 +206,19 @@ const Paddocks = () => {
 
 //Funcion para ordenar los cuarteles con sus respectivos nombres de forma decreciente por la cantiad de hectareas.
  const sortPaddockTypeByTotalArea =()=>{
- const padockType = paddocks.map((paddock)=> paddock.paddockTypeId)
+  let padockArea = paddocks.map((padoc) => padoc.area) 
+  let padockType = paddocks.map((paddock)=> paddock.paddockTypeId)
+  
+  
+  for (padockType < 0; padockType = padockArea; padockType++){
+  
+  } 
+  console.log(padockArea);
 
+ 
   return 
  }
-sortPaddockTypeByTotalArea();
-console.log(paddockType );
+
  
 
   return (
