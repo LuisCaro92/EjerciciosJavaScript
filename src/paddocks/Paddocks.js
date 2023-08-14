@@ -203,27 +203,21 @@ const Paddocks = () => {
   console.log(listPaddockManagersByName());
 
   //Funcion para ordenar los cuarteles con sus respectivos nombres de forma decreciente por la cantiad de hectareas.
-  const sortPaddockTypeByTotalArea = (farmId) => {
-    // const paddockFarm = paddocks.map((paddock)=> paddock.farmId)
-    const paddockArea = paddocks.map((paddock) => paddock.area);
-    
-    const paddockFarm = paddocks.map((paddock) => paddock.farmId);
-    for (let i = 0; i < paddockFarm.length; i++) {
-      if (paddockFarm === farmId) {
-        return  paddockArea.reduce(
-          (acumulador, actual) => acumulador + actual.area,
-          0
-          
-        );
-        
-      }
-    
-    }
-    
-  };
+  const sortPaddockTypeByTotalArea = () => {
+    const paddockFarm = paddockType.map((paddock)=> {
+      const paddockArea = paddocks.reduce((acumulador, actual) => {
+        if (actual.paddockTypeId === paddock.id){
+         return  acumulador + actual.paddockArea
+        }  return acumulador
+      },0);
+     return [paddock.name, paddockArea]
+      
 
+    })
+    console.log(paddockFarm)
+  }
   sortPaddockTypeByTotalArea();
-  //console.log(sortPaddockTypeByTotalArea());
+  console.log(sortPaddockTypeByTotalArea());
 
   return (
     <div class="bg-gray-500 ">
