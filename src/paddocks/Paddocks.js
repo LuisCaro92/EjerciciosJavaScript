@@ -189,9 +189,10 @@ const farms = [
   { id: 2, name: "VINA SANTA PAULA" },
   { id: 3, name: "FORESTAL Y AGRICOLA LO ENCINA" },
 ];
+////////////////////////////////////////////
 
+// fucion para ordenar los rut de administradores de forma decendiente por sus nombres
 const Paddocks = () => {
-  // fucion para ordenar los rut de administradores de forma decendiente por sus nombres
   const listPaddockManagersByName = () => {
     const paddockDecendente = paddockManagers.sort((x, y) =>
       x.name.localeCompare(y.name)
@@ -201,6 +202,8 @@ const Paddocks = () => {
   };
   listPaddockManagersByName();
   console.log(listPaddockManagersByName());
+
+  /////////////////////////////////////////////////////////////////////////////////////////////////7
 
   //Funcion para ordenar los cuarteles con sus respectivos nombres de forma decreciente por la cantiad de hectareas.
   const sortPaddockTypeByTotalArea = () => {
@@ -213,15 +216,35 @@ const Paddocks = () => {
       }, 0);
       return [paddock.name, paddockArea];
     });
-     const areaSort = paddockFarm.sort((a, b) => {
-        return b[1] - a[1];
-     }) 
-     return areaSort
-    
+    const areaSort = paddockFarm.sort((a, b) => {
+      return b[1] - a[1];
+    });
+    return areaSort;
   };
-  
+
   sortPaddockTypeByTotalArea();
   console.log(sortPaddockTypeByTotalArea());
+  //////////////////////////////////////////////////////////////////
+
+  //Funcion con los nombres de los administradoresordenados ordenados decrecientemente por la suma TOTAL de hectáreas que administran
+  const sortFarmManagerByAdminArea = () => {
+   const managersNames = paddockManagers.map((manager) => {
+     const managerArea = paddocks.reduce((acumulador, actual) =>{
+      if (actual.paddockManagerId === manager.id){
+        return acumulador + actual.area;
+      } return acumulador;
+     }, 0);
+     return [manager.name, managerArea]
+   })
+   const totalArea = managersNames.sort((a,b) =>{
+    return b[1] -a[1]
+   });
+    return totalArea
+   
+  };
+  console.log(sortFarmManagerByAdminArea())
+   sortFarmManagerByAdminArea();
+
 
   return (
     <div className="bg-gray-500 ">
