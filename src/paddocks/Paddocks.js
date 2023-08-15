@@ -244,6 +244,20 @@ const Paddocks = () => {
   };
   console.log(sortFarmManagerByAdminArea())
    sortFarmManagerByAdminArea();
+  //////////////////////////////////////////////////////
+
+  const farmManagerNames = () => {
+    const nameFarms = farms.map((farm) =>{
+      const rutAdmin = paddocks.map((paddock) => {
+        if (farms.id === paddock.paddockManagerId){
+          return [farm.name, rutAdmin]
+        }
+      })
+      
+    })
+    console.log(nameFarms)
+  }
+  farmManagerNames();
 
 
   return (
