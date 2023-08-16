@@ -228,39 +228,38 @@ const Paddocks = () => {
 
   //Funcion con los nombres de los administradoresordenados ordenados decrecientemente por la suma TOTAL de hectáreas que administran
   const sortFarmManagerByAdminArea = () => {
-   const managersNames = paddockManagers.map((manager) => {
-     const managerArea = paddocks.reduce((acumulador, actual) =>{
-      if (actual.paddockManagerId === manager.id){
-        return acumulador + actual.area;
-      } return acumulador;
-     }, 0);
-     return [manager.name, managerArea]
-   })
-   const totalArea = managersNames.sort((a,b) =>{
-    return b[1] -a[1]
-   });
-    return totalArea
-   
+    const managersNames = paddockManagers.map((manager) => {
+      const managerArea = paddocks.reduce((acumulador, actual) => {
+        if (actual.paddockManagerId === manager.id) {
+          return acumulador + actual.area;
+        }
+        return acumulador;
+      }, 0);
+      return [manager.name, managerArea];
+    });
+    const totalArea = managersNames.sort((a, b) => {
+      return b[1] - a[1];
+    });
+    return totalArea;
   };
-  console.log(sortFarmManagerByAdminArea())
-   sortFarmManagerByAdminArea();
+  console.log(sortFarmManagerByAdminArea());
+  sortFarmManagerByAdminArea();
   //////////////////////////////////////////////////////
 
   const farmManagerNames = () => {
-    const nameFarms = farms.map((farm) =>{
-      const rutAdmin = paddocks.map((paddock) => {
-      if (paddock.farmId === farm.id){
-        
-      } 
-        
-      })
-      return [farm.name, rutAdmin]
-    })
-    console.log(nameFarms)
-
+   const idFarms = farms.map((farm) => farm.id)
+   const idPaddocks = paddocks.map((paddock) => {
+    if(idFarms === paddock.farmId){
+      return farms.name
+    }
+    
+   }
+   ) 
+   console.log(idPaddocks)
+   
   }
+ 
   farmManagerNames();
-
 
   return (
     <div className="bg-gray-500 ">
