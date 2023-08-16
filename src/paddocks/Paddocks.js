@@ -249,13 +249,15 @@ const Paddocks = () => {
   const farmManagerNames = () => {
     const nameFarms = farms.map((farm) =>{
       const rutAdmin = paddocks.map((paddock) => {
-        if (farms.id === paddock.paddockManagerId){
-          return [farm.name, rutAdmin]
-        }
+      if (paddock.farmId === farm.id){
+        
+      } 
+        
       })
-      
+      return [farm.name, rutAdmin]
     })
     console.log(nameFarms)
+
   }
   farmManagerNames();
 
