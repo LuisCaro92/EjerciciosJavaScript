@@ -247,18 +247,18 @@ const Paddocks = () => {
   //////////////////////////////////////////////////////
 
   const farmManagerNames = () => {
-   const idFarms = farms.map((farm) => farm.id)
-   const idPaddocks = paddocks.map((paddock) => {
-    if(idFarms === paddock.farmId){
-      return farms.name
-    }
-    
-   }
-   ) 
-   console.log(idPaddocks)
-   
-  }
- 
+     const nameFarms = farms.map((farm) => {
+      const idFarms = paddocks.map((paddock) => {
+        const nameManager = paddockManagers.map((manager)=>{
+            if (farm.id === paddock.farmId){
+              return [farm.name, manager.name]
+            }
+        })
+      })
+     })
+     console.log(nameFarms);
+  };
+  console.log(farmManagerNames())
   farmManagerNames();
 
   return (
