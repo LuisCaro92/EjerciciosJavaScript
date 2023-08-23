@@ -1,4 +1,5 @@
 import "./App.css";
+import Contador from "./paddocks/Contador";
 import Paddocks from "./paddocks/Paddocks"
 
 
@@ -36,6 +37,7 @@ function App() {
     <div className="bg-gray-700 text-white text-center w-xl">
   
       <Paddocks/>
+      <Contador/>
     </div>
   );
 }

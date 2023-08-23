@@ -1,5 +1,4 @@
-import AdminPadocks from "./AdminPadocks";
-import { useState, useEffect } from "react";
+
 
 // Responsables de los cuarteles
 const paddockManagers = [
@@ -261,10 +260,6 @@ const Paddocks = () => {
   farmManagerNames();
 
 
-  const funcionAritmetica =() =>{
-    s 
-  }
-  funcionAritmetica()
 
   return (
     <div className="bg-gray-500 ">
