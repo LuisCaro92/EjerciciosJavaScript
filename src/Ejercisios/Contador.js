@@ -14,27 +14,35 @@ const Contador = () => {
     return setClick(0);
   };
   return (
-    <div className="container ">
-      <h1 className="text-5xl my-10 font-semibold text-fuchsia-600">
+    <div className="flex justify-center m-20">
+    <div className="container-xl bg-gray-300 flex items-center rounded-xl">
+      <div className=" grid grid-cols-1  ">
+        <div className="mx-auto"> 
+      <h1 className="text-5xl my-10 font-semibold text-black-600">
         Contador JS
       </h1>
-      <span className="text-7xl my-10">{click}</span>
+      </div>
+      <div className="mx-auto">
+      <span className="text-7xl text-fuchsia-500 my-10 columns-1">{click}</span>
+      </div>
       <div className="m-10">
         <button
           className="bt-b text-center bg-slate-500 border-solid rounded-md w-40 h-15 m-5 p-5 hover:text-fuchsia-400 transition  hover:border-fuchsia-600 cursor-pointer"
-          onClick={buttonAumentar}
+          onClick={buttonDisminuir}
         >
-          AUMENTAR
+          DISMINUIR
         </button>
         <button className="bt-b text-center bg-slate-500 border-solid rounded-md w-40 h-15 m-5 p-5 hover:text-fuchsia-400 transition  hover:border-fuchsia-600 cursor-pointer"
         onClick={buttonResetear}>
           RESETEAR
         </button>
         <button className="bt-b text-center bg-slate-500 border-solid rounded-md w-40 h-15 m-5 p-5 hover:text-fuchsia-400 transition  hover:border-fuchsia-600 cursor-pointer"
-       onClick={buttonDisminuir} >
-          DISMINUIR
+       onClick={buttonAumentar} >
+          AUMENTAR
         </button>
       </div>
+    </div>
+    </div>
     </div>
   );
 };
