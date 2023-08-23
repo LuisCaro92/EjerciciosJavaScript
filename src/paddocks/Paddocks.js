@@ -260,6 +260,12 @@ const Paddocks = () => {
       console.log(farmManagerNames())
   farmManagerNames();
 
+
+  const funcionAritmetica =() =>{
+    s 
+  }
+  funcionAritmetica()
+
   return (
     <div className="bg-gray-500 ">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
