@@ -27,16 +27,16 @@ const Contador = () => {
       </div>
       <div className="m-10">
         <button
-          className="bt-b text-center bg-slate-500 border-solid rounded-md w-40 h-15 m-5 p-5 hover:text-fuchsia-400 transition  hover:border-fuchsia-600 cursor-pointer shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] transform hover:scale-110  duration-500 ease-in-out"
+          className="bt-b text-center text-white bg-slate-500 border-solid rounded-md w-40 h-15 m-5 p-5 hover:text-black transition hover:bg-slate-400 hover:border-fuchsia-600 cursor-pointer shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] transform hover:scale-110 active:scale-90 duration-300 ease-in-out"
           onClick={buttonDisminuir}
         >
           DISMINUIR
         </button>
-        <button className="bt-b text-center bg-slate-500 border-solid rounded-md w-40 h-15 m-5 p-5 hover:text-fuchsia-400 transition  hover:border-fuchsia-600 cursor-pointer shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] transform hover:scale-110  duration-500 ease-in-out"
+        <button className="bt-b text-center text-white bg-slate-500 border-solid rounded-md w-40 h-15 m-5 p-5 hover:text-black transition  hover:bg-slate-400  hover:border-fuchsia-600 cursor-pointer shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] transform hover:scale-110 active:scale-90 duration-300 ease-in-out"
         onClick={buttonResetear}>
           RESETEAR
         </button>
-        <button className="bt-b text-center bg-slate-500 border-solid rounded-md w-40 h-15 m-5 p-5 hover:text-fuchsia-400 transition  hover:border-fuchsia-600 cursor-pointer shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] transform hover:scale-110  duration-500 ease-in-out"
+        <button className="bt-b text-center text-white bg-slate-500 border-solid rounded-md w-40 h-15 m-5 p-5 hover:text-black transition  hover:bg-slate-400 hover:border-fuchsia-600 cursor-pointer shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset] transform hover:scale-110 active:scale-90 duration-300 ease-in-out"
        onClick={buttonAumentar} >
           AUMENTAR
         </button>
