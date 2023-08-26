@@ -39,11 +39,11 @@ const Calculadora = () => {
         <span className="flex justify-end text-7xl">{click}</span>
       </div>
 
-      <div className="flex items-stretch bg-slate-500 h-24">
-        <div className="flex-1 justify-center flex items-center">
+      <div className="flex bg-slate-500 ">
+        <div className="">
         {botones.map((boton) => (
-          <div className="m-1 flex items-center justify-center">
-              <button className="flex items-center justify-center w-20 h-20 rounded-xl bg-yellow-600 m-2 shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)] hover:scale-110 active:scale-50 duration-500 ease-in-out hover:bg-yellow-400">
+          <div className="m-1 grid ">
+              <button className=" w-20 h-20 rounded-xl bg-yellow-600 m-2 shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)] hover:scale-110 active:scale-50 duration-500 ease-in-out hover:bg-yellow-400">
                 {boton.operador}
                 {boton.id}
                 {boton.igual}
