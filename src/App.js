@@ -7,10 +7,11 @@ import Nav from "./components/Nav";
 function App() {
   return (
     <div className="bg-slate-400">
-      <BrowserRouter></BrowserRouter>
+      
       <Nav/>
       <Contador />
       <Calculadora />
+      
     </div>
   );
 }

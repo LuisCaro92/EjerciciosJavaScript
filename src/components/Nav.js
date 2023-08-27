@@ -8,7 +8,7 @@ const Nav = () =>{
                 
                 <li className="text-black ">Calculadora</li>
                 
-              
+            
                 <li className="text-black ">Contador</li>
                
                 <li className="text-black "></li>
