@@ -1,24 +1,32 @@
 import { useEffect, useState } from "react";
+import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const CarritoCompras = () => {
-  const [products, setProducts] = useState([]);
+    
+    const carrito =<FontAwesomeIcon icon={faCartPlus}/>
+    const [products, setProducts] = useState([]);
+
+
+
 
   const getProducts = () => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data))
-      .catch((error) => console.log(error));
+      .catch((error) => console.log(error))
   };
 
   useEffect(() => {
-    getProducts();
+    getProducts()
   });
 
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-          Customers also purchased
+        <h2 className="text-6xl font-bold mb-40 tracking-tight text-gray-900 text-center">
+          Tienda Ramdon
         </h2>
 
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 ">
@@ -50,9 +58,11 @@ const CarritoCompras = () => {
                   Precio: ${product.price}
                 </p>
               </div>
-              <div className="flex justify-end my-10 hover:scale-110 active:scale-50 duration-500 ease-in-out">
-                <button className="border-solid  mx-auto w-40 h-10  rounded-lg text-white bg-green-700 cursor-pointer hover:scale-110 active:scale-50 duration-500 ease-in-out">
-                  Buy
+              <div className="flex justify-center my-10 ">
+                <button className="group [transform:translateZ(0)] px-6 py-3 w-40 rounded-lg bg-gray-200 overflow-hidden relative before:absolute before:bg-green-600 before:bottom-0 before:left-0 before:h-full before:w-full before:origin-[100%_100%] before:scale-x-0 hover:before:origin-[0_0] hover:before:scale-x-100 before:transition before:ease-in-out before:duration-500">
+                  <span className="text-xl relative z-0 text-black group-hover:text-gray-200 transition ease-in-out duration-500">
+                  {carrito}
+                  </span>
                 </button>
               </div>
             </div>
