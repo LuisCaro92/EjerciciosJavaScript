@@ -5,7 +5,15 @@ import { useState } from "react";
 
 const Nav = () => {
   const carro = <FontAwesomeIcon icon={faBagShopping} />;
-  const [active, setActive] =useState(false);
+  const [active, setActive] = useState(false);
+
+  const compra = (
+    <div className="container h-50 w-50">
+      <div className="bg-gray">
+ASEGadsg
+      </div>
+    </div>
+  );
 
   return (
     <div className=" bg-slate-200 w-full h-15 text-center">
@@ -23,10 +31,15 @@ const Nav = () => {
         </Link>
 
         <Link to="/Carrito">
-          <li onClick={()=> setActive(!active)} className="mt-1 ml-20 mr-5 text-4xl text-green-400 cursor-pointer hover:scale-110 active:scale-90 transition-transform ease-in-out duration-200">
+          <button
+            onClick={() => setActive(!active)}
+            className="mt-1 ml-20 mr-5 text-4xl text-green-400 cursor-pointer hover:scale-110 active:scale-90 transition-transform ease-in-out duration-200"
+          >
             {carro}
-           
-          </li>
+            <div>
+            {compra}
+            </div>
+          </button>
         </Link>
       </ul>
     </div>
