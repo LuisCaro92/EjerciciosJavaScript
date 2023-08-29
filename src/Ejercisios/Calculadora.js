@@ -1,38 +1,41 @@
 import { useState } from "react";
 
 const Calculadora = () => {
-  const [click, setClick] = useState(0);
+  const [click, setClick] = useState("");
 
   const botones = [
-    { operador: "MC" },
-    { operador: "C" },
-    { id: 7 },
-    { id: 4 },
+    { id: 9 },
+    { id: 6 },
+    { id: 3 },
     { id: 1 },
-    { id: "%" },
-
-    { operador: "M+" },
-    { operador: "/" },
     { id: 8 },
     { id: 5 },
     { id: 2 },
     { id: 0 },
-
-    { operador: "M-" },
-    { operador: "X" },
-    { id: 9 },
-    { id: 6 },
-    { id: 3 },
-    { id: "," },
-
-    { operador: "MR" },
-    { operador: "<-" },
-    { operador: "-" },
-    { operador: "+" },
+    { id: 7 },
+    { id: 4 },
   ];
 
-  const botonSuma =()=>{
-    return setClick(click + botones.id)
+  const operadores = [
+    { id: "%" },
+    { id: "," },
+    { id: "+" },
+    { id: "/" },
+    { id: "x" },
+    { id: "-" },
+    
+  ];
+
+  const buttonText = (e) => {
+    return setClick(click + e.target.value)
+  };
+
+  const handDelete =() => {
+    return setClick("");
+  }
+
+  const buttonIgual = () => {
+    return setClick(eval(click))
   }
   return (
     <div className="mx-auto overflow-hidden mt-10 shadow-lg mb-2 bg-slate-500  border rounded-lg lg:w-2/6 md:w-3/6 sm:w-4/6">
@@ -45,19 +48,38 @@ const Calculadora = () => {
       </div>
 
       <div className="flex bg-slate-500 ">
-        <div className="grid grid-rows-6 grid-flow-col mx-auto">
+        <div className="grid grid-rows-4 grid-flow-col mx-auto m-3">
           {botones.map((boton) => (
-            <div className="m-1">
-              <button className="text-3xl w-20 h-20 rounded-xl bg-yellow-600 m-1 shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)] hover:scale-110 active:scale-50 duration-500 ease-in-out hover:bg-yellow-400">
-                {boton.operador}
-                {boton.id}
-              </button>
-            </div>
-            
+            <button
+              value={boton.id}
+              onClick={buttonText}
+              className="text-3xl w-20 h-20 rounded-xl bg-yellow-600 m-1 shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)] hover:scale-110 active:scale-50 duration-500 ease-in-out hover:bg-yellow-400"
+            >
+              {boton.id}
+            </button>
           ))}
-          <button className="text-3xl w-20 h-20 rounded-xl bg-yellow-800 m-1 shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)] hover:scale-110 active:scale-50 duration-500 ease-in-out hover:bg-yellow-400">
-            =
+           <button
+            onClick={handDelete}
+            className="text-3xl w-20 h-20 rounded-xl bg-yellow-700 m-1 shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)] hover:scale-110 active:scale-50 duration-500 ease-in-out hover:bg-yellow-400"
+          > 
+          C
           </button>
+        {operadores.map((operador) => (
+            <button
+            value={operador.id}
+            onClick={buttonText}
+            className="text-3xl w-20 h-20 rounded-xl bg-yellow-700 m-1 shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)] hover:scale-110 active:scale-50 duration-500 ease-in-out hover:bg-yellow-400"
+          > {operador.id}
+          </button>
+        ))}
+        <button
+            value = "="
+            onClick={ buttonIgual}
+            className="text-3xl w-20 h-20 rounded-xl bg-yellow-700 m-1 shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)] hover:scale-110 active:scale-50 duration-500 ease-in-out hover:bg-yellow-400"
+          > 
+           =
+          </button>
+      
         </div>
       </div>
     </div>
