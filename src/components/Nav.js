@@ -5,7 +5,9 @@ import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
 
 const Nav = () => {
+
     const carro = <FontAwesomeIcon icon={faCartPlus} />;
+
   return (
     <div className=" bg-slate-200 w-full h-12 text-center">
       <ul className="flex  justify-center">
@@ -18,7 +20,7 @@ const Nav = () => {
         </Link>
 
         <Link to="/Carrito">
-          <li className="p-2 mx-10 text-black ">{carro}</li>
+          <li className="flex justify-end p-2  text-black ">{carro}</li>
         </Link>
 
         <li className="p-2 mx-10 text-black "></li>
