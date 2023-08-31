@@ -1,18 +1,10 @@
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import Compras from "../Ejercicios/Compras";
 
-const Nav = ({allProducts,
-	setAllProducts,
-	total,
-	countProducts,
-	setCountProducts,
-	setTotal,
+
+ const Compras = ({
+	
 }) => {
-
-  const [active, setActive] = useState(false);
+	const [active, setActive] = useState(false);
 
 	const onDeleteProduct = product => {
 		const results = allProducts.filter(
@@ -30,29 +22,10 @@ const Nav = ({allProducts,
 		setCountProducts(0);
 	};
 
+	return (
+		<header>
+		
 
-
-  return (
-    <div className=" bg-slate-200 w-full h-15 text-center">
-      <ul className="flex justify-end">
-        <Link to="/Calculadora">
-          <li className="p-2 ml-20 text-2xl font-semibold text-black cursor-pointer hover:text-fuchsia-400">
-            Calculadora
-          </li>
-        </Link>
-
-        <Link to="/Contador">
-          <li className="p-2 ml-20 text-2xl font-semibold text-black cursor-pointer hover:text-fuchsia-400">
-            Contador
-          </li>
-        </Link>
-
-        
-          <button
-            onClick={() => setActive(!active)}
-            className="mt-1 ml-20 mr-5 text-4xl cursor-pointer hover:scale-110 active:scale-90 transition-transform ease-in-out duration-200"
-          >
-         
 			<div className=' flex justify-end container-icon relative'>
 				<div
 					className='container-cart-icon flex'
@@ -131,12 +104,8 @@ const Nav = ({allProducts,
 					)}
 				</div>
 			</div>
-           
-          </button>
-      
-      </ul>
-    </div>
-  );
+		</header>
+	);
 };
 
-export default Nav;
+export default Compras;

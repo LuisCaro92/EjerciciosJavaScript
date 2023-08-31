@@ -5,6 +5,7 @@ import CarritoCompras from "./Ejercicios/CarritoCompras";
 import Contador from "./Ejercicios/Contador";
 import { useState } from "react";
 import Nav from "./components/Nav";
+import Compras from "./Ejercicios/Compras";
 
 function App() {
   const [allProducts, setAllProducts] = useState([]);
@@ -26,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/Contador" element={<Contador />} />
           <Route path="/Calculadora" element={<Calculadora />} />
+          <Route path="/Compras" element={<Compras/>} />
           <Route
             path="/Carrito"
             element={
