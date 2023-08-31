@@ -1,8 +1,8 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Calculadora from "./Ejercisios/Calculadora";
-import CarritoCompras from "./Ejercisios/CarritoCompras";
-import Contador from "./Ejercisios/Contador";
+import Calculadora from "./Ejercicios/Calculadora";
+import CarritoCompras from "./Ejercicios/CarritoCompras";
+import Contador from "./Ejercicios/Contador";
 import { useState } from "react";
 import Nav from "./components/Nav";
 
