@@ -2,7 +2,12 @@ import { useState } from "react";
 
 
  const Compras = ({
-	
+	allProducts,
+	setAllProducts,
+	total,
+	countProducts,
+	setCountProducts,
+	setTotal,
 }) => {
 	const [active, setActive] = useState(false);
 
