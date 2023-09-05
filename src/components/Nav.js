@@ -35,6 +35,13 @@ const Nav = ({allProducts,
   return (
     <div className=" bg-slate-200 w-full h-15 text-center">
       <ul className="flex justify-end">
+	  <Link to="/AppTime">
+          <li className="p-2 ml-20 text-2xl font-semibold text-black cursor-pointer hover:text-fuchsia-400">
+            AppTime
+          </li>
+        </Link>
+
+
         <Link to="/Calculadora">
           <li className="p-2 ml-20 text-2xl font-semibold text-black cursor-pointer hover:text-fuchsia-400">
             Calculadora
