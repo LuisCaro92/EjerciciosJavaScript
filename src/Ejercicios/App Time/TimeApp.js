@@ -7,17 +7,21 @@ function TimeApp() {
 const lupa = <FontAwesomeIcon icon={faMagnifyingGlass}/>
 
   return (
-    <div className="container mx-auto justify-center">
+    <div className="mx-auto">
+        <div className="w-full flex justify-center bg-black">
+            <h1 className="text-white text-4xl mx-auto m-5">Predicción Metereologica</h1>
+        </div>
       <form action="#">
-        <div className="mt-5 h-30">
-          <div className="flex">
-            <span>Agregue su direccion</span>
+        
+        <div className="container-xl items-center flex justify-center">
+          <div className="flex items-center">
+            <span className="">Agregue su direccion</span>
             <input
               type="text"
               placeholder="Search"
               className="border border-gray-200 py-1 px-2 rounded-lg w-full"
             />
-           <button className="ml-5 w-40 h-10 rounded-xl bg-slate-700 cursor-pointer">{lupa}</button>
+           <button className="ml-5 w-40 h-10 rounded-xl bg-slate-700 cursor-pointer ">{lupa}</button>
           </div>
         </div>
       </form>
