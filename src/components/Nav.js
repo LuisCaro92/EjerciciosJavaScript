@@ -34,7 +34,7 @@ const Nav = ({allProducts,
 
   return (
     <div className=" bg-slate-200 w-full h-15 text-center">
-      <ul className="flex justify-end">
+      <ul className="flex justify-end items-center">
 	  <Link to="/AppTime">
           <li className="p-2 ml-20 text-2xl font-semibold text-black cursor-pointer hover:text-fuchsia-400">
             AppTime
@@ -71,7 +71,7 @@ const Nav = ({allProducts,
 						viewBox='0 0 24 24'
 						strokeWidth='1.5'
 						stroke='currentColor'
-						className='icon-cart w-20 h-20 cursor pointer '
+						className='icon-cart w-10 h-10 cursor pointer '
 					>
 						<path
 							strokeLinecap='round'

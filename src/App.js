@@ -14,8 +14,9 @@ function App() {
   const [countProducts, setCountProducts] = useState(0);
 
   return (
-    <div className="bg-slate-400">
-      <BrowserRouter>
+    <div>
+    <div className="bg-[url('imagenfondo.jpg')]  bg-cover max-xl:">
+      <BrowserRouter className="bg-[url('imagenfondo.jpg')]  bg-cover max-xl:">
         <Nav
           allProducts={allProducts}
           setAllProducts={setAllProducts}
@@ -26,10 +27,10 @@ function App() {
         />
 
         <Routes>
-          <Route path="/AppTime" element={<TimeApp/>}/>
+          <Route path="/AppTime" element={<TimeApp />} />
           <Route path="/Contador" element={<Contador />} />
           <Route path="/Calculadora" element={<Calculadora />} />
-          <Route path="/Compras" element={<Compras/>} />
+          <Route path="/Compras" element={<Compras />} />
           <Route
             path="/Carrito"
             element={
@@ -45,6 +46,7 @@ function App() {
           />
         </Routes>
       </BrowserRouter>
+    </div>
     </div>
   );
 }
