@@ -60,7 +60,7 @@ const Nav = ({allProducts,
             className="mt-1 ml-20 mr-5 text-4xl cursor-pointer hover:scale-110 active:scale-90 transition-transform ease-in-out duration-200"
           >
          
-			<div className=' flex justify-end container-icon relative'>
+			<div className='flex justify-end container-icon relative'>
 				<div
 					className='container-cart-icon flex'
 					onClick={() => setActive(!active)}
