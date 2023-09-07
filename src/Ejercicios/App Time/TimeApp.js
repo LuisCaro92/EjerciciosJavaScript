@@ -1,8 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 
 function TimeApp() {
+
+    const [city, setCity] = useState("") 
+
+    const onSubmit =(e) => {
+        e.preventDefault();
+        console.log(city)
+    }
 
 const lupa = <FontAwesomeIcon icon={faMagnifyingGlass}/>
 
@@ -11,7 +19,7 @@ const lupa = <FontAwesomeIcon icon={faMagnifyingGlass}/>
         <div className="w-full flex justify-center bg-black">
             <h1 className="text-white text-4xl mx-auto m-5">Predicción Metereologica</h1>
         </div>
-      <form action="#">
+      <form onSubmit={onSubmit}>
         
         <div className="container-xl items-center flex justify-center">
           <div className="flex items-center">
@@ -20,6 +28,7 @@ const lupa = <FontAwesomeIcon icon={faMagnifyingGlass}/>
               type="text"
               placeholder="Search"
               className="border border-gray-200 py-1 px-2 rounded-lg w-full"
+              onChange={(e)=>setCity(e.target.value)}
             />
            <button className="ml-5 w-40 h-10 rounded-xl bg-slate-700 cursor-pointer ">{lupa}</button>
           </div>
