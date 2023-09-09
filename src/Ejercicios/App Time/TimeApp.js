@@ -9,7 +9,9 @@ function TimeApp() {
 
     const onSubmit =(e) => {
         e.preventDefault();
-        console.log(city)
+        console.log({city});
+        if(city === "" || !city) return;
+
     }
 
 const lupa = <FontAwesomeIcon icon={faMagnifyingGlass}/>
@@ -30,7 +32,7 @@ const lupa = <FontAwesomeIcon icon={faMagnifyingGlass}/>
               className="border border-gray-200 py-1 px-2 rounded-lg w-full"
               onChange={(e)=>setCity(e.target.value)}
             />
-           <button className="ml-5 w-40 h-10 rounded-xl bg-slate-700 cursor-pointer ">{lupa}</button>
+           <button className="ml-5 w-40 h-10 rounded-lg bg-slate-700 cursor-pointer ">{lupa}</button>
           </div>
         </div>
       </form>
