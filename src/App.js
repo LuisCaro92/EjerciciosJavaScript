@@ -6,7 +6,7 @@ import Contador from "./Ejercicios/Contador";
 import { useState } from "react";
 import Nav from "./components/Nav";
 import Compras from "./Ejercicios/Compras";
-import TimeApp from "./Ejercicios/App Time/TimeApp";
+import Panel from "./Ejercicios/App Time/Panel";
 
 function App() {
   const [allProducts, setAllProducts] = useState([]);
@@ -27,7 +27,7 @@ function App() {
         />
 
         <Routes>
-          <Route path="/AppTime" element={<TimeApp />} />
+          <Route path="/Panel" element={<Panel />} />
           <Route path="/Contador" element={<Contador />} />
           <Route path="/Calculadora" element={<Calculadora />} />
           <Route path="/Compras" element={<Compras />} />
