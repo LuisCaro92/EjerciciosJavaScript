@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import Panel from "./Panel";
 
 
 function TimeApp() {
@@ -36,6 +37,10 @@ const lupa = <FontAwesomeIcon icon={faMagnifyingGlass}/>
           </div>
         </div>
       </form>
+
+      <div>
+        <Panel/>
+      </div>
     </div>
   );
 }
