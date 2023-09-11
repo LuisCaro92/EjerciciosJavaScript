@@ -14,8 +14,8 @@ function App() {
   const [countProducts, setCountProducts] = useState(0);
 
   return (
-    <div>
-    <div className="bg-[url('imagenfondo.jpg')]  bg-cover max-xl:">
+    
+    <div className="h-full bg-[url('imagenfondo.jpg')]  bg-cover max-xl:">
       <BrowserRouter className="bg-[url('imagenfondo.jpg')]  bg-cover max-xl:">
         <Nav
           allProducts={allProducts}
@@ -47,7 +47,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
-    </div>
+    
   );
 }
 
