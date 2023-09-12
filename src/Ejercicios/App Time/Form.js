@@ -1,17 +1,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import  { useState } from "react";
 import Panel from "./Panel";
 
 
-function TimeApp() {
-
+function TimeApp({newLocation}) {
+ 
     const [city, setCity] = useState("") 
 
     const onSubmit =(e) => {
         e.preventDefault();
         console.log({city});
         if(city === "" || !city) return;
+
+        newLocation(city);
 
     }
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Form from "./Form"
 
 function Panel() {
@@ -63,9 +63,15 @@ function Panel() {
   };
 
   return (
-    <div>
-   <Form/>
-  </div>
+    
+      <React.Fragment>
+      <Form
+         newLocation = {getLocation}
+      
+      />
+      </React.Fragment>
+   
+  
   );
 }
 
